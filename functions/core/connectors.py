@@ -1,12 +1,10 @@
+import os
 from office365.sharepoint.client_context import ClientContext
 from office365.runtime.auth.client_credential import ClientCredential
 from office365.sharepoint.files.system_object_type import FileSystemObjectType
 from office365.sharepoint.listitems.listitem import ListItem
-import os
 
-SP_URL = "https://viendaukhivn.sharepoint.com/sites/Eptesting"
-CLIENT_ID = "2b8bc67b-26f2-4431-a208-a88d0bbf5396"
-CLIENT_SECRET = "RPORi5qG9W28skRVbxbLrF/4oWPCaLkYULOscT62Mmk="
+from ..params import SP_URL, CLIENT_ID, CLIENT_SECRET
 
 class Connector(object):
     @classmethod

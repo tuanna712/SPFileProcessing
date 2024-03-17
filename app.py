@@ -16,3 +16,27 @@ with open("./style/style.css") as f:
 
 # --- MAIN ----------------------------------------------------------------------
 from streamlit_option_menu import option_menu
+from ui.page01_main import display_01_main
+from ui.page02_main import display_02_main
+
+if st.session_state.get('switch_button', False):
+    st.session_state['menu_option'] = (st.session_state.get('menu_option', 0) + 1) % 4
+    manual_select = st.session_state['menu_option']
+else:
+    manual_select = None
+    
+# Link to Github: https://github.com/victoryhb/streamlit-option-menu
+menu_selection = option_menu(None, ["Files", "Processing",],
+    icons=['archive', 'card-image', "table",], #, 'blockquote-right'
+    orientation="horizontal", manual_select=manual_select, key='menu_4',
+    styles={
+        # "container": {"padding": "0!important", "background-color": "#fafafa"},
+        # "nav-link-selected": {"background-color": "green"},
+    }
+    )
+
+if menu_selection == "Files":
+    display_01_main()
+elif menu_selection == "Processing":
+    display_02_main()
+
