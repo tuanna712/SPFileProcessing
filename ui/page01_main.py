@@ -21,7 +21,21 @@ load_dotenv()
 # #Connect to Sharepoint
 # SPConnector = Connector().to_sharepoint()
 #-----------------------------------------------------------------------------
-from .page01.ui_fetch_sp_urls import ui_fetch_SP_urls
+from .page01.ui_fetch_sp_urls import ui_fetch_site_urls, ui_fetch_songhong_urls, ui_fetch_files4bot, ui_fetch_processed_image
 def display_01_main():
-    ui_fetch_SP_urls()
-    ...
+    page_columns = st.columns([2, 5, 3])
+    with page_columns[0]:
+        with st.container(border=True, height=600):
+            st.write("Files Fetching Buttons")
+            ui_fetch_site_urls()
+            ui_fetch_songhong_urls()
+            ui_fetch_files4bot()
+            ui_fetch_processed_image()
+    with page_columns[1]:
+
+        ...
+    
+    with page_columns[2]:
+
+        ...
+        

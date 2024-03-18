@@ -6,15 +6,33 @@ CLIENT_SECRET = "RPORi5qG9W28skRVbxbLrF/4oWPCaLkYULOscT62Mmk="
 #Sharepoint settings
 TENANT_URL = "https://viendaukhivn.sharepoint.com"
 MAIN_SITE = "/sites/Eptesting/Shared Documents/General/DATABASE/Song Hong Basin/"
-TARGET_FOLDER = ["Block 103-107", "Block 105", "Block 108", "Block 111", "Block 112", "Block 113", "Block 114", "Block 115"]
-
+TARGET_FOLDER = ["1. Regional Studies",
+                "Block 100-101",
+                "Block 102-106",
+                "Block 103-107",
+                "Block 104",
+                "Block 105",
+                "Block 108",
+                "Block 111",
+                "Block 112",
+                "Block 113",
+                "Block 114",
+                "Block 115",
+                "Block 117",
+                "Block 118",
+                "Block 119",
+                "Block 120",
+                "Block 121",
+                "MVHN 01 02KT",
+                "MVHN 02",
+                ]
 TEMP_FILE_FOLDER = "./data/temp/processing"
 TEMP_IMAGE_FOLDER = "./data/temp/images"
 
 DEFAULT_URL_FILE = "data/urls.json"
 
-#Local Path to save fetched all file's urls of the MAIN_SITE
-FETCHED_MAINSITE_FILE_URLS_JSON = "data/site_file_urls.json"
+#Local Path to save fetched all SITE's urls
+FETCHED_SITE_FILE_URLS_JSON = "data/site_file_urls.json"
 
 USER_NAME = "tuanna"
 IMG_PROCESSING_FOLDER = "./data/temp/usercontent/" + USER_NAME 
